@@ -16,6 +16,7 @@ export default class Resty extends Component {
     handleSubmit = async(e) => {
         e.preventDefault();
         const { apiUrl, method, body } = this.state;
+        let results;
         try {
             results = await apiCall(apiUrl, method, body);
         }		
@@ -26,14 +27,14 @@ export default class Resty extends Component {
         this.setState({ results });
     }
 
-    handleURLChange = () => {
-		this.setState({ apiUrl: target.value });
+    handleURLChange = (e) => {
+		this.setState({ apiUrl: e.target.value });
 	}
-    handleMethodChange = () => {
-		this.setState({ method: target.value });
+    handleMethodChange = (e) => {
+		this.setState({ method: e.target.value });
 	}
-    handleBodyChange = () => {
-		this.setState({ body: target.value });
+    handleBodyChange = (e) => {
+		this.setState({ body: e.target.value });
 	}
 
     render() {

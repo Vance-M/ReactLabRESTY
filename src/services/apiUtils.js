@@ -1,4 +1,5 @@
 export const apiCall = async (apiUrl, method, body) => {
+    let res;
     if (method === 'GET') {
         res = await fetch(apiUrl);
     }
