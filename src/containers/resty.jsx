@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Form from '../components/controls/form'
 import Results from '../components/displays/results'
 import { apiCall } from '../services/apiUtils'
-
+import style from './resty.css';
 
 
 export default class Resty extends Component {
@@ -40,7 +40,7 @@ export default class Resty extends Component {
     render() {
         const { apiUrl, method, body, results } = this.state;
         return (
-            <div>
+            <div className={style.main}>
                 <header>
                     RestyTesty
                 </header>

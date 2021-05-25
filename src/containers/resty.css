@@ -1,0 +1,33 @@
+.main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 10% 20% 1fr;
+    min-height: 100vh;
+    min-width: 90vw;
+    padding: 1rem;
+}
+
+.main header {
+    grid-column: 1 / 3;
+    background-color: rgb(75, 112, 179);
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    color: orange;
+}
+
+.main form {
+    grid-column: 1 / 3;
+	background-color: cornflowerblue;
+}
+
+.main section {
+    background-color: cornflowerblue;
+	padding: 1rem;
+}
+
+.main ul {
+    background-color: salmon;
+	padding-top: 1rem;
+	margin: 0;
+}

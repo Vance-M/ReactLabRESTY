@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import style from './form.css';
 
 const Form = ({ URL, method, body, onURLChange, onBodyChange, onMethodChange, onSubmit }) => (
-    <form onSubmit={onSubmit} aria-label="req-form">
+    <form onSubmit={onSubmit} aria-label="req-form" className={style.form}>
         <input 
             value={URL}
             aria-label="URL-input"
             onInput={onURLChange}
             placeholder="Url Here"
+
         />
-        <span>
+        <span className={style.radioButtons}>
             <label>
                 <input 
                     type="radio"
@@ -51,7 +53,7 @@ const Form = ({ URL, method, body, onURLChange, onBodyChange, onMethodChange, on
                 <span>DELETE</span>
             </label>
         </span>
-        <label>
+        <label className={style.requestBody}>
 			<span> Request Body</span>
 			<textarea 
 				value={body}
